@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration {
             $table->string('password');
             $table->enum('role', ['admin', 'supervisor', 'sales', 'user'])->default('user');
             $table->rememberToken();
+            $table->unsignedInteger('manager')->nullable();;
             $table->timestamps();
         });
     }

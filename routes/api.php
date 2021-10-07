@@ -15,13 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::apiResource(
-    'service_request',
-    'App\Http\Controllers\API\ServiceRequest'
+    '/ServiceRequest',
+    'App\Http\Controllers\API\ServiceRequestApiController'
 );
 
 Route::apiResource(
-    'user',
-    'App\Http\Controllers\API\User'
+    '/users',
+    'App\Http\Controllers\API\UserApiController'
 );
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

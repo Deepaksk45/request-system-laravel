@@ -18,6 +18,9 @@ class CreateServiceRequestsTable extends Migration {
             $table->date('start_date');
             $table->enum('status', ['approve', 'decline', 'escalate', 'new'])->default('new');
             $table->string('duration');
+            $table->string('actions');
+            $table->unsignedInteger('assigned_to')->nullable();
+            $table->unsignedInteger('user_id');
             $table->timestamps();
         });
     }
